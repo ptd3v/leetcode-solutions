@@ -1,3 +1,3 @@
 #interview-essentials-fizzbuzz
 
-Following a difficult interview where I forgotten nearly everything, I will be spending the coming weeks tackling the most popular software challenges.
+Are you ready for your next big interview? Over the coming weeks I'll be tackling the most popular software challenges, starting with 'FizzBuzz'.
