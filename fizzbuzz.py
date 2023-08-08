@@ -4,8 +4,12 @@
 #Skills Required: Problem Solving, Logic, Modulo, Loops, Conditional Statements.
 
 #Create a loop for numbers between 0 and 20.
-for number in range (0,20):
+for number in range (1,21):
   if number % 3 == 0 and number % 5 == 0:
     print("FizzBuzz")
-  else
+  elif
+
+  elif
+  
+  else:
     print(number)
