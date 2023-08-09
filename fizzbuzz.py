@@ -4,12 +4,15 @@
 #Skills Required: Problem Solving, Logic, Modulo, Loops, Conditional Statements.
 
 #Create a loop for numbers between 0 and 20.
-for number in range (1,21):
-  if number % 3 == 0 and number % 5 == 0:
-    print("FizzBuzz")
-  elif
-
-  elif
-  
-  else:
-    print(number)
+for num in range(1, 21):
+    #Check if the number is divisible by both 3 and 5
+    if num % 3 == 0 and num % 5 == 0:
+        print("FizzBuzz")  #If divisible by both 3 and 5, print "FizzBuzz"
+    #Check if the number is divisible by 3
+    elif num % 3 == 0:
+        print("Fizz")  #If divisible by 3, print "Fizz"
+    #Check if the number is divisible by 5
+    elif num % 5 == 0:
+        print("Buzz")  #If divisible by 5, print "Buzz"
+    else:
+        print(num)
