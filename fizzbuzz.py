@@ -15,4 +15,4 @@ for num in range(1, 21):
     elif num % 5 == 0:
         print("Buzz")  #If divisible by 5, print "Buzz"
     else:
-        print(num)
+        print(num) # If not divisible by either 3 or 5, print the number itself
