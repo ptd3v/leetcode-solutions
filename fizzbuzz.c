@@ -13,9 +13,13 @@ int main (void)
         {
             printf("Fizz"\n);
         }
-        else 
+        else if 
         {
             printf("Buzz"\n);
+        }
+        else 
+        {
+            printf("")
         }
     }
 }
