@@ -16,3 +16,10 @@ for num in range(1, 21):
         print("Buzz")  #If divisible by 5, print "Buzz"
     else:
         print(num) #If not divisible by either 3 or 5, print the number itself
+
+#Challenge One (Contributions Welcome)
+for num in range (1,000):
+    #For every FizzBuzz below 10 (numbers divisible by 3 and 5), we get 3, 5, 6 and 9.
+    #Added together, we get 23. Your task is to add every FizzBuzz under 1,000 together.
+
+#You are welcome to use any language you want, just make a new file in the repo if it's not Python.
