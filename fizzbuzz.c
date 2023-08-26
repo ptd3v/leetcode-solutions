@@ -2,24 +2,26 @@
 
 int main (void)
 {
-    int range = 21
+    int range = 21;
     for (int i = 0; i < range; i++)
     {
-        if ( i % 3 == 0 && i % 5 == 0)
+        if ( i % 3 = 0 && i % 5 = 0)
         {
-            printf("fizzbuzz"\n);
+            printf("fizzbuzz\n");
         }
-        else if (i % 3 == 0 && i % 5 != 0)
+        else if (i % 3 = 0)
         {
-            printf("Fizz"\n);
+            printf("Fizz\n");
+            
+           
         }
-        else if 
+        else if (i % 5 = 0)
         {
-            printf("Buzz"\n);
+            printf("Buzz\n");
         }
         else 
         {
-            printf("")
+            printf("d%\n");
         }
     }
 }
