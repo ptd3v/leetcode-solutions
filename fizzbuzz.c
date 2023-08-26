@@ -13,7 +13,6 @@ int main (void)
         {
             printf("Fizz\n");
             
-           
         }
         else if (i % 5 = 0)
         {
