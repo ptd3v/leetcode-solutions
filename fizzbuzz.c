@@ -29,5 +29,5 @@ int main (void)
     }
 
     printf("Fizzbuzz Count = %i\n", count);//Display count value tested with given example range 10, count = 23. 
-    //value when range = 1000, count = 23316
+    //value when range = 1000, count = 233168
 }
