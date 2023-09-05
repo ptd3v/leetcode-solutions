@@ -2,8 +2,8 @@
 
 int main (void)
 {
-    int range = 1000; //Variable to control range of Fizzbuzz
-    int count = 0; //Challange Counter Variable 
+    int range = 1000; // Variable to control range of Fizzbuzz
+    int count = 0; // Challange Counter Variable 
     for (int i = 1; i < range; i++)
     {
         if ( i % 3 == 0 && i % 5 == 0)
@@ -28,6 +28,6 @@ int main (void)
         }
     }
 
-    printf("Fizzbuzz Count = %i\n", count);//Display count value tested with given example range 10, count = 23. 
+    printf("Fizzbuzz Count = %i\n", count); //Display count value tested with given example range 10, count = 23. 
     //value when range = 1000, count = 233168
 }
