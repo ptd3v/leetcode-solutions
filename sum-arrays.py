@@ -11,6 +11,8 @@ def sum_array(numbers):
         return 0
     return sum(numbers)
 
+print(sum_array(numbers)) # Outputs the sum total of the array, solution 1.
+
 # Solution 2 (For Loop)
 def sum_loop(numbers):
     total = 0
@@ -18,8 +20,8 @@ def sum_loop(numbers):
         total += num
     return total
 
+print(sum_loop(numbers)) # Outputs the sum total of the array, solution 2.
+
 # Outputs
 print(numbers) # Outputs the array contents
 print(sum_array) # Outputs the memory location of the array
-print(sum_array(numbers)) # Outputs the sum total of the array, solution 1.
-print(sum_loop(numbers)) # Outputs the sum total of the array, solution 2.
