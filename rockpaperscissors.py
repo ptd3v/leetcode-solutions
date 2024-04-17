@@ -29,3 +29,20 @@ def rockpaperscissors(player1, player2):
         return "Player 1 wins"
     else:
         return "Player 2 wins"
+
+# Community Solution:
+# Summary: Use a dictionary called 'beats'. Wow, I love this.
+def rps(p1, p2):
+    # Define a dictionary representing the winning relationships between choices
+    beats = {'rock': 'scissors', 'scissors': 'paper', 'paper': 'rock'}
+    
+    # Check if player 1's choice beats player 2's choice
+    if beats[p1] == p2:
+        return "Player 1 won!"
+    
+    # Check if player 2's choice beats player 1's choice
+    if beats[p2] == p1:
+        return "Player 2 won!"
+    
+    # If neither player wins based on the dictionary 'beats', return "Draw!"
+    return "Draw!"
