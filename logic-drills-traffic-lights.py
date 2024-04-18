@@ -14,6 +14,7 @@ def update_light(current):
 # Add a dictionary, return the [current] entry in the dictionary.
 def update_light(current):
     return {'green': 'yellow', 'yellow': 'red', 'red': 'green'}[current]
+#   return {"green": "yellow", "yellow": "red", "red": "green"}.get(current, "Invalid")
 
 # Solution 3: Community
 # Noting special, but does contain an error state, which is nice.
@@ -26,5 +27,4 @@ def update_light(current):
         return "green"
     else:
         return "This is not a traffic light color."
-    
     
