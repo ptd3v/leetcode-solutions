@@ -11,8 +11,20 @@ def update_light(current):
         return 'green'
 
 # Solution 2: Advanced
+# Add a dictionary, return the [current] entry in the dictionary.
 def update_light(current):
     return {'green': 'yellow', 'yellow': 'red', 'red': 'green'}[current]
-# Add a dictionary, return the [current] entry in the dictionary.
 
 # Solution 3: Community
+# Noting special, but does contain an error state, which is nice.
+def update_light(current):
+    if current == "green":
+        return "yellow"
+    elif current == "yellow":
+        return "red"
+    elif current == "red":
+        return "green"
+    else:
+        return "This is not a traffic light color."
+    
+    
