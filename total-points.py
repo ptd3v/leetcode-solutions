@@ -2,8 +2,18 @@
 # Our team's match results are recorded in a collection of strings. Each match is represented by a string in the format "x:y", where x is our team's score and y is our opponents score.
 # We need to write a function that takes this collection and returns the number of points our team (x) got in the championship by the rules given above.
 
-# Solutuion One: Simple
+points = (['1:0','2:0','3:0','4:0','2:1','3:1','4:1','3:2','4:2','4:3'])
 
+# Solutuion One: Simple
+def points(games):
+    score = 0
+    for game in games:
+        x, y = map(int, game.split(":"))
+        if x > y:
+            score += 3
+        elif x == y:
+            score += 1
+    return score
 
 # Solution Two: Advanced
 
