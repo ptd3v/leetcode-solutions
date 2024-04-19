@@ -20,7 +20,6 @@ def points(games):
 def points(games):
     return sum(3 if x > y else 1 if x == y else 0 for x, y in (result.split(':') for result in games))
 
-
 # Solution Three: Community
 # Same same the simple solution, but simpler.
 def points(games):
