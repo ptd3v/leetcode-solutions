@@ -16,6 +16,19 @@ def points(games):
     return score
 
 # Solution Two: Advanced
+# Used the map() function with str.partition to split each match result into three parts
+def points(games):
+    return sum(3 if x > y else 1 if x == y else 0 for x, y in (result.split(':') for result in games))
 
 
 # Solution Three: Community
+# Same same the simple solution, but simpler.
+def points(games):
+    count = 0
+    for score in games:
+        res = score.split(':')
+        if res[0]>res[1]:
+            count += 3
+        elif res[0] == res[1]:
+            count += 1
+    return count
