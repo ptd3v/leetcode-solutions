@@ -10,11 +10,12 @@ def filter_list(l):
             new_list.append(item)
     return new_list
 
-def filter_list(l):
-    return [item for item in l if isinstance(item, int)]
-
 # Solution Two: Advanced
-
+def filter_list(l):
+    return [intonly for intonly in l if isinstance(intonly, int)]
 
 # Solution Three: Community
+def filter_list(l):
+  'return a new list with the strings filtered out'
+  return [x for x in l if type(x) is not str]
 
