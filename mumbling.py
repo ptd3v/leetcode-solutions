@@ -9,6 +9,10 @@ def accum(st):
         newlist.append((st * indx).title()) # Title for first capital. st * index value. E.g C * 3.
     return '-'.join(newlist)
 
+# Solution Two
+def accum(s):
+    return '-'.join((a * i).title() for i, a in enumerate(s, 1))
+
 # Solution Three: Community
 def accum(s):
     return '-'.join(c.upper() + c.lower() * i for i, c in enumerate(s)) # Way too many smart cookies on here.
