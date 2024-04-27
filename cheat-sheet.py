@@ -1,3 +1,4 @@
+string = 1,2,3,4
 list =  [1, 2, 3, 4]    # Ordered. Changeable. 0 Index.
 tuple = (1, 2, 3, 4)    # Ordered. Unchangeable. 0 Index. Faster.
 set =   {1, 2, 3, 4}    # Unordered. Unchangeable (Add/ Remove ONLY). No index. No Duplicates.
@@ -11,6 +12,9 @@ print(len(set))         # Length of Set
 print(list.index(1))    # Return index location
 print(list.count(2))    # Total 2's
 
+string.split()          # String only. Creates list. Hello world = ['Hello', 'world']
+string.title()          # String only. Capitalises All Words + Aren'T.
+string.capitalize()     # String only. Capitalises All Words only.
 
 list[0] = 1             # Assign new value
 list.append(5)
@@ -21,6 +25,7 @@ list.reverse()
 
 set.add(5)
 set.remove(5)
+
 
 
 for x in list:
