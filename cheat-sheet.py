@@ -22,11 +22,11 @@ list.remove(5)
 list.insert(0, 0)       # Insert 0 at [0]
 list.sort()
 list.reverse()
+list = min(1,9)         # Returns the lower value
+list = max(1,9)         # Returns the highest value
 
 set.add(5)
 set.remove(5)
-
-
 
 for x in list:
     print(x)
