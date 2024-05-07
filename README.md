@@ -1,3 +1,3 @@
 # interview-essentials-fizzbuzz
 
-Are you ready for your next big interview? Over the coming weeks I'll be tackling the most popular software challenges, starting with 'FizzBuzz'.
+In this repo, I'll be reviewing, problem solving and explaining the most popular software challenges from Leetcode. Perfect for pre-interviews.
