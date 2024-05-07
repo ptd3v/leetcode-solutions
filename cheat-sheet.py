@@ -34,3 +34,5 @@ set.remove(5)
 
 for x in list:
     print(x)
+
+''.join(sorted((set(a+b))))     # Merge two sets of data, sort and remove duplicate values.
