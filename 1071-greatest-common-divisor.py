@@ -9,10 +9,11 @@ class Solution:
         if str1 + str2 != str2 + str1:
             return ""
         
-        def gcd(a, b):
-            while b:
-                a, b = b, a % b
-            return a
+        def gcd(a, b):              # 6, 10             # 10, 4.            # 10, 2
+            while b != 0:           # 10                # 4                 # 2             # 0
+                a, b = b, a % b     # 6, 10 = 10, 4 ^^  # 10, 4 = 10, 2 ^^  # 10, 2 = 2, 0
+            return a                # 10                                                    # 10
+            # Repeat until b = 0, then return a which is the greatest common divisor (gcd)
             
         return str1[:gcd(len(str1), len(str2))]
 

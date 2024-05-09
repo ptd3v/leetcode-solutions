@@ -36,3 +36,5 @@ for x in list:
     print(x)
 
 ''.join(sorted((set(a+b))))     # Merge two sets of data, sort and remove duplicate values.
+
+while b:                # is equivalent to while b != 0, the value of b is a boolean.
