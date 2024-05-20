@@ -38,3 +38,7 @@ for x in list:
 ''.join(sorted((set(a+b))))     # Merge two sets of data, sort and remove duplicate values.
 
 while b:                # is equivalent to while b != 0, the value of b is a boolean.
+
+rev_examples = "The Sky is Blue"
+return ' '.join(s.split()[::-1])                                    # "blue is sky the"
+' '.join([''.join(reversed(word)) for word in s.split()][::-1])     # "eulb si yks eht"
