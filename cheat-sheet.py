@@ -25,6 +25,10 @@ list.reverse()
 list = min(1,9)         # Returns the lower value
 list = max(1,9)         # Returns the highest value
 
+# Format Method:
+Number = 123456789      # Returns (012) 345-6789
+({}{}{}) {}{}{}-{}{}{}{}".format(*n)
+
 # List Comprehension =
 listcomp = [x.upper() for x in fruits if x != "apple"]
 listcomp = [expression for item in iterable if condition == True]
