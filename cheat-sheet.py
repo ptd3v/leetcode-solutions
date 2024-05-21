@@ -46,3 +46,7 @@ while b:                # is equivalent to while b != 0, the value of b is a boo
 rev_examples = "The Sky is Blue"
 return ' '.join(s.split()[::-1])                                    # "blue is sky the"
 ' '.join([''.join(reversed(word)) for word in s.split()][::-1])     # "eulb si yks eht"
+
+print(float('inf'))  # Outputs: inf (guarantee that any number in the list will be LESS than the initial values)
+print(float('-inf')) # Outputs: -inf (guarantee that any number in the list will be MORE than the initial values)
+print(float('nan'))  # Outputs: nan (not a number)
