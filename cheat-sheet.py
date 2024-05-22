@@ -16,6 +16,9 @@ string.split()          # String only. Creates list. Hello world = ['Hello', 'wo
 string.title()          # String only. Capitalises All Words + Aren'T.
 string.capitalize()     # String only. Capitalises All Words only.
 
+%2 == 0:                # Modulo even
+%2 != 0:                # Modulo odd
+
 list[0] = 1             # Assign new value
 list.append(5)
 list.remove(5)
