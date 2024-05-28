@@ -24,3 +24,5 @@ class Solution:
         while insert_pos < len(nums):
             nums[insert_pos] = 0
             insert_pos += 1
+
+            
