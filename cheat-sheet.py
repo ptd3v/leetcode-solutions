@@ -53,5 +53,3 @@ return ' '.join(s.split()[::-1])                                    # "blue is s
 print(float('inf'))  # Outputs: inf (guarantee that any number in the list will be LESS than the initial values)
 print(float('-inf')) # Outputs: -inf (guarantee that any number in the list will be MORE than the initial values)
 print(float('nan'))  # Outputs: nan (not a number)
-
-
