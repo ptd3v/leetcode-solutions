@@ -41,10 +41,9 @@ set.remove(5)
 
 for x in list:
     print(x)
-
 ''.join(sorted((set(a+b))))     # Merge two sets of data, sort and remove duplicate values.
 
-while b:                # is equivalent to while b != 0, the value of b is a boolean.
+while b:                        # is equivalent to while b != 0, the value of b is a boolean.
 
 rev_examples = "The Sky is Blue"
 return ' '.join(s.split()[::-1])                                    # "blue is sky the"
@@ -53,3 +52,5 @@ return ' '.join(s.split()[::-1])                                    # "blue is s
 print(float('inf'))  # Outputs: inf (guarantee that any number in the list will be LESS than the initial values)
 print(float('-inf')) # Outputs: -inf (guarantee that any number in the list will be MORE than the initial values)
 print(float('nan'))  # Outputs: nan (not a number)
+
+print(bool("abc"))              # Evaluate to True. This is because any non-empty string evaluates to True.
