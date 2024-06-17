@@ -53,4 +53,5 @@ print(float('inf'))  # Outputs: inf (guarantee that any number in the list will 
 print(float('-inf')) # Outputs: -inf (guarantee that any number in the list will be MORE than the initial values)
 print(float('nan'))  # Outputs: nan (not a number)
 
-print(bool("abc"))              # Evaluate to True. This is because any non-empty string evaluates to True.
+print(bool("abc"))              # True. Any non-empty string evaluates to True.
+print(bool(0))                  # False.
