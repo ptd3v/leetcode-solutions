@@ -55,3 +55,4 @@ print(float('nan'))  # Outputs: nan (not a number)
 
 print(bool("abc"))              # True. Any non-empty string evaluates to True.
 print(bool(0))                  # False.
+
