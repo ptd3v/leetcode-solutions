@@ -10,7 +10,6 @@ def twoParameters(param1, param2):
 twoParameters("Sherlock","Holmes") 
 
 
-
 string = 1,2,3,4
 list =  [1, 2, 3, 4]    # Ordered. Changeable. 0 Index. Iterable.
 tuple = (1, 2, 3, 4)    # Ordered. Unchangeable. 0 Index. Faster. Iterable.
