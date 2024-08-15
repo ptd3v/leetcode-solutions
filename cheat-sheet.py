@@ -9,6 +9,14 @@ def twoParameters(param1, param2):
 
 twoParameters("Sherlock","Holmes") 
 
+#Scope Example
+def scopeTest(n):   # Inpendant Function
+    n = n + 1       # Global 10 + Local 1
+    print(n)        # Print 11
+
+n = 10              # Global variable
+scopeTest(n)        # Returns 11
+print(n)            # Returns 10
 
 string = 1,2,3,4
 list =  [1, 2, 3, 4]    # Ordered. Changeable. 0 Index. Iterable.
