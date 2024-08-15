@@ -1,3 +1,4 @@
+# Functions
 def functionGreet():    # Function = Block of reuable code
     print("Hello, I am a function.")
 
@@ -9,15 +10,7 @@ def twoParameters(param1, param2):
 
 twoParameters("Sherlock","Holmes") 
 
-#Scope Example
-def scopeTest(n):   # Inpendant Function
-    n = n + 1       # Global 10 + Local 1
-    print(n)        # Print 11
-
-n = 10              # Global variable
-scopeTest(n)        # Returns 11
-print(n)            # Returns 10
-
+# Data Types
 string = 1,2,3,4
 list =  [1, 2, 3, 4]    # Ordered. Changeable. 0 Index. Iterable.
 tuple = (1, 2, 3, 4)    # Ordered. Unchangeable. 0 Index. Faster. Iterable.
@@ -75,4 +68,28 @@ print(float('nan'))  # Outputs: nan (not a number)
 
 print(bool("abc"))              # True. Any non-empty string evaluates to True.
 print(bool(0))                  # False.
+
+#Scope Example
+def scopeTest(n):   # Inpendant Function
+    n = n + 1       # Global 10 + Local 1
+    print(n)        # Print 11
+
+n = 10              # Global variable
+scopeTest(n)        # Returns 11
+print(n)            # Returns 10
+
+def scopeTest2():
+    local_variable = 10
+    return
+
+scopeTest2()        # Will return 10
+print(scopeTest2)   # Will return an error, cannot access local variables
+
+# Default Parameters
+def defaultPara(name="default"):    # Default name will be default
+    print("Hello, " + name + "!")
+
+defaultPara()           # Will print default
+defaultPara("Steve")    # Will print Steve
+
 

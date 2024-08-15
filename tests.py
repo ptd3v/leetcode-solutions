@@ -1,5 +1,5 @@
-def twoParameters(param1, param2):
-    variable = "Hello, " + param1 + param2
-    print(variable)
+def defaultPara(name="default"):    # Default name will be default
+    print("Hello, " + name + "!")
 
-twoParameters("Sherlock","Holmes")
+defaultPara()           # Will print default
+defaultPara("Steve")    # Will print Steve
