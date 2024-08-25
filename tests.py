@@ -17,3 +17,14 @@ def condStat(balance):
 
 condStat(50)
 #print(message2)     
+
+def sum_and_difference(a, b):
+    return a + b, a - b
+
+sum_and_difference(10,5)            # Works, but doesn't print anything.
+print(sum_and_difference(10,5))
+
+def add(a, b):
+    return a + b
+
+add(2, 3)                           # Works, but doesn't print anything.

@@ -1,15 +1,3 @@
-# Functions
-def functionGreet():    # Function = Block of reuable code
-    print("Hello, I am a function.")
-
-functionGreet()         # Run Greet function
-
-def twoParameters(param1, param2):
-    variable = "Hello, " + param1 + param2  # Only strings can be concatenated.
-    print(variable)
-
-twoParameters("Sherlock","Holmes") 
-
 # Data Types
 string = 1,2,3,4
 list =  [1, 2, 3, 4]    # Ordered. Changeable. 0 Index. Iterable.
@@ -29,9 +17,11 @@ string.split()          # String only. Creates list. Hello world = ['Hello', 'wo
 string.title()          # String only. Capitalises All Words + Aren'T.
 string.capitalize()     # String only. Capitalises All Words only.
 
+# Modulo
 %2 == 0:                # Modulo even
 %2 != 0:                # Modulo odd
 
+# List Commands
 list[0] = 1             # Assign new value
 list.append(5)
 list.remove(5)
@@ -69,6 +59,27 @@ print(float('nan'))  # Outputs: nan (not a number)
 print(bool("abc"))              # True. Any non-empty string evaluates to True.
 print(bool(0))                  # False.
 
+# Conditional Statements
+x = 15
+if x < 10:
+    print("x is less than 10")
+elif x == 10:
+    print("x is exactly 10")
+else:
+    print("x is greater than 10")
+
+# Functions
+def functionGreet():    # Function = Block of reuable code
+    print("Hello, I am a function.")
+
+functionGreet()         # Run Greet function
+
+def twoParameters(param1, param2):
+    variable = "Hello, " + param1 + param2  # Only strings can be concatenated.
+    print(variable)
+
+twoParameters("Sherlock","Holmes") 
+
 #Scope Example
 def scopeTest(n):   # Inpendant Function
     n = n + 1       # Global 10 + Local 1
@@ -92,3 +103,22 @@ def defaultPara(name="default"):    # Default name will be default
 defaultPara()           # Will print default
 defaultPara("Steve")    # Will print Steve
 
+# Type hints/ type annotations
+def bill(balance: int, bill: int) -> int:
+    return balance - bill
+
+def bill(balance, bill):    # Both of these code snippets will run the same.
+    return balance - bill
+
+# Return Statement Example
+def add_numbers(a, b):      # Returning a value
+    return a + b
+
+result = add_numbers(3, 4)
+print(result)               # Output: 7
+
+def is_even(number):        # Returning a Computed Value
+    return number % 2 == 0
+
+print(is_even(10))          # Output: True
+print(is_even(7))           # Output: False
