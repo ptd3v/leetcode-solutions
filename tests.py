@@ -113,15 +113,7 @@ for i in range(len(stringB)):
 for i in stringB:
     print (i)
 
-# Program to determine which Pokémon type is best to use in a battle based on conditions
-
-pokemon_type = "Water"
-opponent_type = "Fire"
-has_advantage_item = True
-
-if pokemon_type == "Grass" and not has_advantage_item:
-    print("Your Grass-type Pokémon might struggle without an advantage item.")
-elif (pokemon_type == "Water" and opponent_type == "Fire") or (has_advantage_item and pokemon_type != "Electric"):
-    print("Your Water-type Pokémon has a type advantage over the Fire-type opponent!")
-else:
-    print("You might want to switch Pokémon or use an advantage item.")
+try:
+    result = 10 / 0
+except:
+    print("Error - 0 Divide")

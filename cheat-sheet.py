@@ -1,3 +1,15 @@
+#
+__init__:       # Gives all instances/ ojects spefic attributes with the class.
+__init__(self): # Self allows methods within a class to access and modify the instance's attributes.
+
+# Structure
+class Dog:              # Class: The blueprint/ template of an object/ instance (e.g., Dog).
+    def bark():         # Method: A function that defines what the instance can do (e.g., bark()).
+        print("Woof!")
+
+my_dog = Dog()          # An object/ instance created from the class (e.g., my_dog).
+my_dog.bark             # Call the bark method on the instance.
+
 # Data Types
 string = 1,2,3,4        # Immutable.
 list =  [1, 2, 3, 4]    # Mutable. 0 Index. Iterable.
@@ -87,10 +99,6 @@ for x in list:
 
 while b:                        # is equivalent to while b != 0, the value of b is a boolean.
 
-rev_examples = "The Sky is Blue"
-' '.join(s.split()[::-1])                                    # "blue is sky the"
-' '.join([''.join(reversed(word)) for word in s.split()][::-1])     # "eulb si yks eht"
-
 # Dictionary convert from List      
 def list_to_dictionary(words: list) -> dict:
     new_Dict = {}
@@ -116,8 +124,30 @@ myDict.values()                         # Returns dictionary values, mot keys.
 list(myDict.values())                   # Convert dictionary values to a list. Output [1, 2, 3]
 
 # Input()
-input("User input here: ")              # Input string by default
+input("User input here: ")              # String by default
 int(input("User input here: "))         # Convert input to int
+float(input("User input here: "))       # Convert input to float
+
+# Parsing
+rev_examples = "The Sky is Blue"
+' '.join(s.split()[::-1])                                    # "blue is sky the"
+' '.join([''.join(reversed(word)) for word in s.split()][::-1])     # "eulb si yks eht"
+
+# Exception Handling
+try:
+    result = 10 / 0                   # Will throw an error alone
+except:
+    print("Error")                    # Will print error message instead.
+
+# Error Catching
+try:
+    result = 10 / 0                   # Willproduce an error
+except ValueError:
+    print("Custom error message for Value Error")
+except Exception as error:
+    print("Error: ", error)           # Will print error message instead, along with the error.
+
+
 
 
 print(float('inf'))  # Outputs: inf (guarantee that any number in the list will be LESS than the initial values)
