@@ -3,8 +3,29 @@ string = 1,2,3,4
 list =  [1, 2, 3, 4]    # Ordered. Changeable. 0 Index. Iterable.
 tuple = (1, 2, 3, 4)    # Ordered. Unchangeable. 0 Index. Faster. Iterable.
 set =   {1, 2, 3, 4}    # Unordered. Unchangeable (Add/ Remove ONLY). No index. No Duplicates. Iterable.
-#set()                  # Empty Set
+set()                   # Empty Set
 dict =  {'A':1,'B':2}   # Key: Value
+
+# Len()
+stringA = len("Hello")  # Output: 5
+listA = len([1, 2, 3, 4]) # Output: 4
+if stringA >= listA:
+    print("Comparing the len()")
+
+# Zero Based Indexing
+stringB = "Hello"
+print(stringB[0])                   # Print the index 0 value
+print(stringB[len(stringB) - 1])    # Print the last index value
+
+# String Looping
+for i in range(len(stringA)):
+    print(stringA[i])
+
+# String Concatenation
+    stringC = stringA + stringB
+    if len(stringC) > 10:
+        return "Too Long"
+    return stringC
 
 print(list[0])          # List, Tuple.
 print(tuple[::-1])      # Start:End:Step
@@ -31,9 +52,14 @@ list.reverse()
 list = min(1,9)         # Returns the lower value
 list = max(1,9)         # Returns the highest value
 
-# Format Method:
-Number = 123456789      # Returns (012) 345-6789
-({}{}{}) {}{}{}-{}{}{}{}".format(*n)
+# String Formatting
+Name = "Susan"
+Number = 123456789
+print("Hello, {}. You are {} years old.".format(Name, Number))
+print("Hello, {}. You are {} years old.".format(Number, Name))
+# F-String Altenative
+print(f"Hello, {Name}. You are {Number} years old.")
+
 
 # List Comprehension =
 listcomp = [x.upper() for x in fruits if x != "apple"]
@@ -61,12 +87,59 @@ print(bool(0))                  # False.
 
 # Conditional Statements
 x = 15
-if x < 10:
+if x < 10:                      # With elif only ONE of these conditions will ever execute.
     print("x is less than 10")
 elif x == 10:
     print("x is exactly 10")
 else:
     print("x is greater than 10")
+
+# While Loops
+i = 0
+while i < 5:
+    print("Hello")
+    i += 1
+
+# While Loop Count
+z = 0
+while z < 10:
+    print(z)
+
+# For Loops
+for i in range(10):     # Prints 0-9.
+    print(i)
+
+# Loop Range defined
+for i in range(10, 21): # Print 10 - 20. 
+    print(i)
+
+# Loop Steps
+for i in range(10, 21, 2): # Print 10 - 20. 2 steps.
+    print(i)
+
+# Reverse Loop
+for i in reversed(range(10, 20)):
+    print(i)
+
+# Nested Loops
+for i in range(1, 4):       # Runs: 1-3.
+    for j in range(1,4):    # Runs: 1,1. 1,2. 1,3. 2,1. 2,2. etc.
+        print(i, j)
+
+# Control Flow
+def example():
+    if x == x:
+        break       # Exit Loop immediately.
+        continue    # Skips current iteration, moves to next.
+        pass        # Not loop specific. Does nothing, placeholder.
+
+# Pass and Break Loops:
+for i in range(1, 8):
+    if i == 3:      # Prints 1, 2, 4, 5.
+        continue    # If 3, move on, do not process.
+    elif i == 6:    # When 6 is reached..
+        break       # Break or end the program.
+    print(i)
 
 # Functions
 def functionGreet():    # Function = Block of reuable code
@@ -122,3 +195,17 @@ def is_even(number):        # Returning a Computed Value
 
 print(is_even(10))          # Output: True
 print(is_even(7))           # Output: False
+
+# Program using all of the function used so far:
+# Program to determine which Pokémon type is best to use in a battle based on conditions
+
+pokemon_type = "Water"
+opponent_type = "Fire"
+has_advantage_item = True
+
+if pokemon_type == "Grass" and not has_advantage_item:
+    print("Your Grass-type Pokémon might struggle without an advantage item.")
+elif (pokemon_type == "Water" and opponent_type == "Fire") or (has_advantage_item and pokemon_type != "Electric"):
+    print("Your Water-type Pokémon has a type advantage over the Fire-type opponent!")
+else:
+    print("You might want to switch Pokémon or use an advantage item.")
