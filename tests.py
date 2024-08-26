@@ -91,6 +91,16 @@ stringB = "Hello"
 print(stringB[0])                   # Print the index 0 value
 print(stringB[len(stringB) - 1])    # Print the last index value
 
+def count_x(nums: int, x: int) -> int:
+    result = 0
+    for n in nums:
+        if n == x:
+            result += 1
+    return result
+
+ui = input("User input here: ")
+print(ui)
+
 Name = "Susan"
 Number = 123456789
 print("Hello, {}. You are {} years old.".format(Name, Number))

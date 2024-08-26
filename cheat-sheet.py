@@ -1,13 +1,25 @@
 # Data Types
-string = 1,2,3,4
-list =  [1, 2, 3, 4]    # Ordered. Changeable. 0 Index. Iterable.
-tuple = (1, 2, 3, 4)    # Ordered. Unchangeable. 0 Index. Faster. Iterable.
-set =   {1, 2, 3, 4}    # Unordered. Unchangeable (Add/ Remove ONLY). No index. No Duplicates. Iterable.
-set()                   # Empty Set
+string = 1,2,3,4        # Immutable.
+list =  [1, 2, 3, 4]    # Mutable. 0 Index. Iterable.
+tuple = (1, 2, 3, 4)    # Immutable. 0 Index. Iterable. Faster.
+set =   {1, 2, 3, 4}    # Immutable (Add/ Remove ONLY). Unordered. No index. No Duplicates. Iterable.
 dict =  {'A':1,'B':2}   # Key: Value
+dict["C"] = 3           # Add C:3 to the dictionary.
+dict = {name: age}      # Create dictionary using parameters.
+set()                   # Create and empty set, removes duplicates.
 
-# Len()
-stringA = len("Hello")  # Output: 5
+# String Formatting
+Name = "Susan"
+Number = 123456789
+print("Hello, {}. You are {} years old.".format(Name, Number))
+print("Hello, {}. You are {} years old.".format(Number, Name))
+# F-String Altenative
+print(f"Hello, {Name}. You are {Number} years old.")
+
+string.split()          # String only. Creates list. Hello world = ['Hello', 'world']
+string.title()          # String only. Capitalises All Words + Aren'T.
+string.capitalize()     # String only. Capitalises All Words only.
+stringA = len("Hello")  # String Len. Output: 5
 listA = len([1, 2, 3, 4]) # Output: 4
 if stringA >= listA:
     print("Comparing the len()")
@@ -34,34 +46,35 @@ print(len(set))         # Length of Set
 print(list.index(1))    # Return index location
 print(list.count(2))    # Total 2's
 
-string.split()          # String only. Creates list. Hello world = ['Hello', 'world']
-string.title()          # String only. Capitalises All Words + Aren'T.
-string.capitalize()     # String only. Capitalises All Words only.
-
 # Modulo
 %2 == 0:                # Modulo even
 %2 != 0:                # Modulo odd
 
 # List Commands
-list[0] = 1             # Assign new value
-list.append(5)
+list[0] = 1             # Assign value 1 to index 0.
+list[-1]                # Print the last index value.
+list[-3:]               # Print the last 3 values of a list.
+list.append(5)          # Add for list
+set.add(5)              # Add for set
+mySet = set(myList)     # Convert a list to set.
 list.remove(5)
+list.pop(0)             # Removes the element at index 0.
 list.insert(0, 0)       # Insert 0 at [0]
 list.sort()
 list.reverse()
 list = min(1,9)         # Returns the lower value
 list = max(1,9)         # Returns the highest value
+if 2 in list            # Returns boolean True
+if 2 not in list        # Returns boolean False
 
-# String Formatting
-Name = "Susan"
-Number = 123456789
-print("Hello, {}. You are {} years old.".format(Name, Number))
-print("Hello, {}. You are {} years old.".format(Number, Name))
-# F-String Altenative
-print(f"Hello, {Name}. You are {Number} years old.")
+def count_x(nums: int, x: int) -> int:      # List Looping
+    result = 0
+    for n in nums:
+        if n == x:
+            result += 1
+    return result
 
-
-# List Comprehension =
+# List Comprehension
 listcomp = [x.upper() for x in fruits if x != "apple"]
 listcomp = [expression for item in iterable if condition == True]
 
@@ -75,8 +88,37 @@ for x in list:
 while b:                        # is equivalent to while b != 0, the value of b is a boolean.
 
 rev_examples = "The Sky is Blue"
-return ' '.join(s.split()[::-1])                                    # "blue is sky the"
+' '.join(s.split()[::-1])                                    # "blue is sky the"
 ' '.join([''.join(reversed(word)) for word in s.split()][::-1])     # "eulb si yks eht"
+
+# Dictionary convert from List      
+def list_to_dictionary(words: list) -> dict:
+    new_Dict = {}
+    for i in range(len(words)):
+        w = words[i]
+        new_Dict[w] = i
+    return new_Dict
+
+# Dictionary Count Charaters
+def countChars(word: str) -> Dict:
+    count = {}                          # Empty dictionary.
+    for char in word:
+        if char not in count:           # If char does not exist in count (error), set value to 0.
+            count[char] = 0
+        count[char]= count[char] + 1    # Then incrememnt it by 1.
+    return count
+
+# Dictionary Function
+myDict = {"a": 1, "b": 2, "c": 3, }
+myDict.pop("a")                         # Removes a from the dictionary
+myDict.pop("a", 0)                      # Returns 0 if an error occurs.
+myDict.values()                         # Returns dictionary values, mot keys.
+list(myDict.values())                   # Convert dictionary values to a list. Output [1, 2, 3]
+
+# Input()
+input("User input here: ")              # Input string by default
+int(input("User input here: "))         # Convert input to int
+
 
 print(float('inf'))  # Outputs: inf (guarantee that any number in the list will be LESS than the initial values)
 print(float('-inf')) # Outputs: -inf (guarantee that any number in the list will be MORE than the initial values)
