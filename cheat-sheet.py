@@ -12,6 +12,7 @@ my_dog.bark             # Call the bark method on the instance.
 
 # Attributes:   What an object is/ has. Name, age, height.
 # Method:       What an object can do. Eat, sleep, breathe.
+# (Self):       THIS instance of a class.
 
 # Data Types
 string = 1,2,3,4        # Immutable.
