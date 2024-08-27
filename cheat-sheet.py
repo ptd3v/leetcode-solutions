@@ -7,8 +7,11 @@ class Dog:              # Class: The blueprint/ template of an object/ instance 
     def bark():         # Method: A function that defines what the instance can do (e.g., bark()).
         print("Woof!")
 
-my_dog = Dog()          # An object/ instance created from the class (e.g., my_dog).
+my_dog = Dog()          # An object/ instance of the Dog class.
 my_dog.bark             # Call the bark method on the instance.
+
+# Attributes:   What an object is/ has. Name, age, height.
+# Method:       What an object can do. Eat, sleep, breathe.
 
 # Data Types
 string = 1,2,3,4        # Immutable.
