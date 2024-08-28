@@ -1,178 +1,132 @@
-#
-__init__:       # Gives all instances/ ojects spefic attributes with the class.
-__init__(self): # Self allows methods within a class to access and modify the instance's attributes.
-
-# Structure
-class Dog:              # Class: The blueprint/ template of an object/ instance (e.g., Dog).
-    def bark():         # Method: A function that defines what the instance can do (e.g., bark()).
+# Classes and Objects
+class Dog:
+    def __init__(self):     # Initializes a new Dog instance.
+        pass   
+    def bark(self):         # Method: Defines what the Dog instance can do.
         print("Woof!")
 
-my_dog = Dog()          # An object/ instance of the Dog class.
-my_dog.bark             # Call the bark method on the instance.
-
-# Attributes:   What an object is/ has. Name, age, height.
-# Method:       What an object can do. Eat, sleep, breathe.
-# (Self):       THIS instance of a class.
-
-# List Comprehension
-[expression for item in iterable if condition]
+my_dog = Dog()              # Create an instance of Dog.
+my_dog.bark()               # Call the bark method on the instance.
 
 # Data Types
-string = 1,2,3,4        # Immutable.
-list =  [1, 2, 3, 4]    # Mutable. 0 Index. Iterable.
-tuple = (1, 2, 3, 4)    # Immutable. 0 Index. Iterable. Faster.
-set =   {1, 2, 3, 4}    # Immutable (Add/ Remove ONLY). Unordered. No index. No Duplicates. Iterable.
-dict =  {'A':1,'B':2}   # Key: Value
-dict["C"] = 3           # Add C:3 to the dictionary.
-dict = {name: age}      # Create dictionary using parameters.
-set()                   # Create and empty set, removes duplicates.
+string = "Hello"            # Immutable sequence of characters.
+list = [1, 2, 3, 4]         # Mutable sequence of items.
+tuple = (1, 2, 3, 4)        # Immutable sequence. Faster than list.
+set = {1, 2, 3, 4}          # Unordered collection of unique items.
+dict = {'A': 1, 'B': 2}     # Key-value pairs. Mutable.
 
-# Useful Equations
-sqrt_n = n ** 0.5
-
-# Comparison
-if x < '0' or x > '9':  # By surrounding an int by '', you comparse the ASCII string.
-
+## String Operations
 # String Formatting
 Name = "Susan"
 Number = 123456789
-print("Hello, {}. You are {} years old.".format(Name, Number))
-print("Hello, {}. You are {} years old.".format(Number, Name))
-# F-String Altenative
-print(f"Hello, {Name}. You are {Number} years old.")
+print("Hello, {}. You are {} years old.".format(Name, Number))  # Old-style formatting.
+print(f"Hello, {Name}. You are {Number} years old.")            # F-string formatting.
 
-string.split()          # String only. Creates list. Hello world = ['Hello', 'world']
-string.title()          # String only. Capitalises All Words + Aren'T.
-string.capitalize()     # String only. Capitalises All Words only.
-stringA = len("Hello")  # String Len. Output: 5
-listA = len([1, 2, 3, 4]) # Output: 4
+# String Methods
+string = "hello world"
+print(string.split())            # Splits string into a list.
+print(string.title())            # Capitalizes the first letter of each word.
+print(string.capitalize())       # Capitalizes the first letter of the string.
+
+# String Length
+stringA = len("Hello")          # Length of a string.
+listA = len([1, 2, 3, 4])       # Length of a list.
 if stringA >= listA:
     print("Comparing the len()")
 
-# Zero Based Indexing
-stringB = "Hello"
-print(stringB[0])                   # Print the index 0 value
-print(stringB[len(stringB) - 1])    # Print the last index value
-
-# String Looping
-for i in range(len(stringA)):
-    print(stringA[i])
-
 # String Concatenation
-    stringC = stringA + stringB
-    if len(stringC) > 10:
-        return "Too Long"
-    return stringC
+stringB = "world"
+stringC = string + " " + stringB
+if len(stringC) > 10:
+    print("Too Long")
+else:
+    print(stringC)
 
-print(list[0])          # List, Tuple.
-print(tuple[::-1])      # Start:End:Step
-print(1 in set)         # True
-print(len(set))         # Length of Set
-print(list.index(1))    # Return index location
-print(list.count(2))    # Total 2's
+## Lists
+# List Operations
+list = [1, 2, 3, 4]
+print(list[0])          # Access first element.
+print(list[-1])         # Access last element.
+print(list[-3:])        # Slice the last 3 elements.
+list.append(5)          # Add element to the end.
+list.remove(5)          # Remove the first occurrence of 5.
+list.pop(0)             # Remove element at index 0.
+list.insert(0, 0)       # Insert 0 at index 0.
+list.sort()             # Sort the list in place.
+list.reverse()          # Reverse the list in place.
+print(min(1, 9))        # Minimum value.
+print(max(1, 9))        # Maximum value.
+print(len(list))        # Length of the list.
 
-# Modulo
-%2 == 0:                # Modulo even
-%2 != 0:                # Modulo odd
+#### Sets
+# Set Operations
+set = {1, 2, 3, 4}
+set.add(5)              # Add element to the set.
+set.remove(5)           # Remove element from the set.
+mySet = set([1, 2, 3])  # Convert list to set.
+print(len(set))         # Length of the set.
 
-# List Commands
-list[0] = 1             # Assign value 1 to index 0.
-list[-1]                # Print the last index value.
-list[-3:]               # Print the last 3 values of a list.
-list.append(5)          # Add for list
-set.add(5)              # Add for set
-mySet = set(myList)     # Convert a list to set.
-list.remove(5)
-list.pop(0)             # Removes the element at index 0.
-list.insert(0, 0)       # Insert 0 at [0]
-list.sort()
-list.reverse()
-list = min(1,9)         # Returns the lower value
-list = max(1,9)         # Returns the highest value
-if 2 in list            # Returns boolean True
-if 2 not in list        # Returns boolean False
+## Dictionaries
+# Dictionary Operations
+myDict = {"a": 1, "b": 2, "c": 3}
+myDict.pop("a")                        # Remove item with key 'a'.
+myDict.pop("a", 0)                     # Remove item with key 'a', return 0 if not found.
+print(myDict.values())                 # Print dictionary values.
+print(list(myDict.values()))           # Convert dictionary values to a list.
 
-def count_x(nums: int, x: int) -> int:      # List Looping
-    result = 0
-    for n in nums:
-        if n == x:
-            result += 1
-    return result
-
-# List Comprehension
-listcomp = [x.upper() for x in fruits if x != "apple"]
-listcomp = [expression for item in iterable if condition == True]
-
-set.add(5)
-set.remove(5)
-
-for x in list:
-    print(x)
-''.join(sorted((set(a+b))))     # Merge two sets of data, sort and remove duplicate values.
-
-while b:                        # is equivalent to while b != 0, the value of b is a boolean.
-
-# Dictionary convert from List      
+# Convert List to Dictionary
 def list_to_dictionary(words: list) -> dict:
     new_Dict = {}
-    for i in range(len(words)):
-        w = words[i]
+    for i, w in enumerate(words):
         new_Dict[w] = i
     return new_Dict
 
-# Dictionary Count Charaters
-def countChars(word: str) -> Dict:
-    count = {}                          # Empty dictionary.
+# Count Characters in a String
+def count_chars(word: str) -> dict:
+    count = {}
     for char in word:
-        if char not in count:           # If char does not exist in count (error), set value to 0.
-            count[char] = 0
-        count[char]= count[char] + 1    # Then incrememnt it by 1.
+        count[char] = count.get(char, 0) + 1
     return count
 
-# Dictionary Function
-myDict = {"a": 1, "b": 2, "c": 3, }
-myDict.pop("a")                         # Removes a from the dictionary
-myDict.pop("a", 0)                      # Returns 0 if an error occurs.
-myDict.values()                         # Returns dictionary values, mot keys.
-list(myDict.values())                   # Convert dictionary values to a list. Output [1, 2, 3]
+## Input and Parsing
+# Input
+user_input = input("User input here: ")             # Input as string.
+user_input_int = int(input("Enter an integer: "))   # Convert input to int.
+user_input_float = float(input("Enter a float: "))  # Convert input to float.
 
-# Input()
-input("User input here: ")              # String by default
-int(input("User input here: "))         # Convert input to int
-float(input("User input here: "))       # Convert input to float
+# Parsing Strings
+s = "The Sky is Blue"
+print(' '.join(s.split()[::-1]))  # Reverse words in string.
+print(' '.join([''.join(reversed(word)) for word in s.split()][::-1]))  # Reverse characters and words.
 
-# Parsing
-rev_examples = "The Sky is Blue"
-' '.join(s.split()[::-1])                                    # "blue is sky the"
-' '.join([''.join(reversed(word)) for word in s.split()][::-1])     # "eulb si yks eht"
-
+#### Error Handling
 # Exception Handling
 try:
-    result = 10 / 0                   # Will throw an error alone
-except:
-    print("Error")                    # Will print error message instead.
-
-# Error Catching
-try:
-    result = 10 / 0                   # Willproduce an error
-except ValueError:
-    print("Custom error message for Value Error")
+    result = 10 / 0
+except ZeroDivisionError:
+    print("Cannot divide by zero.")
 except Exception as error:
-    print("Error: ", error)           # Will print error message instead, along with the error.
+    print("Error:", error)
 
+#### Math Functions
+import math
 
+# Basic Math Operations
+sqrt_n = math.sqrt(9)          # Square root of 9.
+pow_n = pow(3, 2)              # 3 squared.
+round_value = round(3.14159, 2)  # Round to 2 decimal places.
 
+# Common Math Functions
+print(math.sqrt(9))          # Square root of 9.
+print(math.floor(3.7))       # Floor value of 3.7.
+print(math.ceil(3.1))        # Ceil value of 3.1.
+print(math.factorial(5))     # Factorial of 5.
+print(math.log(100, 10))     # Log base 10 of 100.
 
-print(float('inf'))  # Outputs: inf (guarantee that any number in the list will be LESS than the initial values)
-print(float('-inf')) # Outputs: -inf (guarantee that any number in the list will be MORE than the initial values)
-print(float('nan'))  # Outputs: nan (not a number)
-
-print(bool("abc"))              # True. Any non-empty string evaluates to True.
-print(bool(0))                  # False.
-
+#### Conditional Statements and Loops
 # Conditional Statements
 x = 15
-if x < 10:                      # With elif only ONE of these conditions will ever execute.
+if x < 10:
     print("x is less than 10")
 elif x == 10:
     print("x is exactly 10")
@@ -185,112 +139,59 @@ while i < 5:
     print("Hello")
     i += 1
 
-# While Loop Count
-z = 0
-while z < 10:
-    print(z)
-
 # For Loops
-for i in range(10):     # Prints 0-9.
+for i in range(10):        # Prints 0-9.
     print(i)
 
-# Loop Range defined
-for i in range(10, 21): # Print 10 - 20. 
+for i in range(10, 21):   # Print 10 - 20.
     print(i)
 
-# Loop Steps
-for i in range(10, 21, 2): # Print 10 - 20. 2 steps.
-    print(i)
-
-# Reverse Loop
-for i in reversed(range(10, 20)):
+for i in range(10, 21, 2): # Print 10 - 20 with step 2.
     print(i)
 
 # Nested Loops
-for i in range(1, 4):       # Runs: 1-3.
-    for j in range(1,4):    # Runs: 1,1. 1,2. 1,3. 2,1. 2,2. etc.
+for i in range(1, 4):
+    for j in range(1, 4):
         print(i, j)
 
-# Control Flow
-def example():
-    if x == x:
-        break       # Exit Loop immediately.
-        continue    # Skips current iteration, moves to next.
-        pass        # Not loop specific. Does nothing, placeholder.
-
-# Pass and Break Loops:
+# Loop Control
 for i in range(1, 8):
-    if i == 3:      # Prints 1, 2, 4, 5.
-        continue    # If 3, move on, do not process.
-    elif i == 6:    # When 6 is reached..
-        break       # Break or end the program.
+    if i == 3:
+        continue   # Skip iteration when i == 3.
+    elif i == 6:
+        break      # Exit loop when i == 6.
     print(i)
 
-# Functions
-def functionGreet():    # Function = Block of reuable code
+#### Functions
+# Basic Function
+def function_greet():
     print("Hello, I am a function.")
 
-functionGreet()         # Run Greet function
+function_greet()  # Call function_greet.
 
-def twoParameters(param1, param2):
-    variable = "Hello, " + param1 + param2  # Only strings can be concatenated.
+# Function with Parameters
+def two_parameters(param1, param2):
+    variable = "Hello, " + param1 + param2
     print(variable)
 
-twoParameters("Sherlock","Holmes") 
+two_parameters("Sherlock", "Holmes")
 
-#Scope Example
-def scopeTest(n):   # Inpendant Function
-    n = n + 1       # Global 10 + Local 1
-    print(n)        # Print 11
+# Scope Example
+def scope_test(n):
+    n = n + 1
+    print(n)
 
-n = 10              # Global variable
-scopeTest(n)        # Returns 11
-print(n)            # Returns 10
-
-def scopeTest2():
-    local_variable = 10
-    return
-
-scopeTest2()        # Will return 10
-print(scopeTest2)   # Will return an error, cannot access local variables
+n = 10
+scope_test(n)    # Prints 11.
+print(n)        # Prints 10.
 
 # Default Parameters
-def defaultPara(name="default"):    # Default name will be default
+def default_para(name="default"):
     print("Hello, " + name + "!")
 
-defaultPara()           # Will print default
-defaultPara("Steve")    # Will print Steve
+default_para()          # Prints "Hello, default!"
+default_para("Steve")   # Prints "Hello, Steve!"
 
-# Type hints/ type annotations
+# Type Hints
 def bill(balance: int, bill: int) -> int:
     return balance - bill
-
-def bill(balance, bill):    # Both of these code snippets will run the same.
-    return balance - bill
-
-# Return Statement Example
-def add_numbers(a, b):      # Returning a value
-    return a + b
-
-result = add_numbers(3, 4)
-print(result)               # Output: 7
-
-def is_even(number):        # Returning a Computed Value
-    return number % 2 == 0
-
-print(is_even(10))          # Output: True
-print(is_even(7))           # Output: False
-
-# Program using all of the function used so far:
-# Program to determine which Pokémon type is best to use in a battle based on conditions
-
-pokemon_type = "Water"
-opponent_type = "Fire"
-has_advantage_item = True
-
-if pokemon_type == "Grass" and not has_advantage_item:
-    print("Your Grass-type Pokémon might struggle without an advantage item.")
-elif (pokemon_type == "Water" and opponent_type == "Fire") or (has_advantage_item and pokemon_type != "Electric"):
-    print("Your Water-type Pokémon has a type advantage over the Fire-type opponent!")
-else:
-    print("You might want to switch Pokémon or use an advantage item.")
