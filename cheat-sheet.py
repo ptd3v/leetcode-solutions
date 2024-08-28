@@ -27,6 +27,12 @@ dict["C"] = 3           # Add C:3 to the dictionary.
 dict = {name: age}      # Create dictionary using parameters.
 set()                   # Create and empty set, removes duplicates.
 
+# Useful Equations
+sqrt_n = n ** 0.5
+
+# Comparison
+if x < '0' or x > '9':  # By surrounding an int by '', you comparse the ASCII string.
+
 # String Formatting
 Name = "Susan"
 Number = 123456789
