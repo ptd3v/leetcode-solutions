@@ -14,6 +14,9 @@ my_dog.bark             # Call the bark method on the instance.
 # Method:       What an object can do. Eat, sleep, breathe.
 # (Self):       THIS instance of a class.
 
+# List Comprehension
+[expression for item in iterable if condition]
+
 # Data Types
 string = 1,2,3,4        # Immutable.
 list =  [1, 2, 3, 4]    # Mutable. 0 Index. Iterable.
