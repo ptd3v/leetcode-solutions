@@ -11,9 +11,17 @@ my_dog.bark()               # Call the bark method on the instance.
 # Data Types
 string = "Hello"            # Immutable sequence of characters.
 list = [1, 2, 3, 4]         # Mutable sequence of items.
+array = [1, 2, 3, 4]        # Similar to list, typically used for numerical operations.
 tuple = (1, 2, 3, 4)        # Immutable sequence. Faster than list.
 set = {1, 2, 3, 4}          # Unordered collection of unique items.
 dict = {'A': 1, 'B': 2}     # Key-value pairs. Mutable.
+
+## Applies function to each item in an iterable and returns..
+# A new iterable with the results.
+map(str, [1, 2, 3])                 # Converts [1, 2, 3] to ['1', '2', '3']
+
+# A new iterable containing only the items for which the function returns True.
+filter(lambda x: x > 1, [1, 2, 3])  # Returns [2, 3]
 
 ## String Operations
 # String Formatting
@@ -24,9 +32,12 @@ print(f"Hello, {Name}. You are {Number} years old.")            # F-string forma
 
 # String Methods
 string = "hello world"
-print(string.split())            # Splits string into a list.
-print(string.title())            # Capitalizes the first letter of each word.
-print(string.capitalize())       # Capitalizes the first letter of the string.
+print(string[1:-1])             # Remove the first and last character.
+print(string.split())           # Splits string into a list.
+print(string.title())           # Capitalizes the first letter of each word.
+print(string.capitalize())      # Capitalizes the first letter of the string.
+
+bin(a + b)[2::]                 # Converts the result to Binary, removes the 0b added by bin().
 
 # String Length
 stringA = len("Hello")          # Length of a string.
@@ -108,22 +119,23 @@ except ZeroDivisionError:
 except Exception as error:
     print("Error:", error)
 
-#### Math Functions
+## Math Functions
 import math
+print(math.sqrt(9))             # Square root of 9.
+print(math.floor(3.7))          # Floor value of 3.7.
+print(math.ceil(3.1))           # Ceil value of 3.1.
+print(math.factorial(5))        # Factorial of 5.
+print(math.log(100, 10))        # Log base 10 of 100.
 
 # Basic Math Operations
-sqrt_n = math.sqrt(9)          # Square root of 9.
-pow_n = pow(3, 2)              # 3 squared.
-round_value = round(3.14159, 2)  # Round to 2 decimal places.
+sqrt_n = math.sqrt(9)           # Square root of 9.
+pow_n = pow(3, 2)               # 3 squared.
+round_value = round(3.14159, 2) # Round to 2 decimal places.
 
-# Common Math Functions
-print(math.sqrt(9))          # Square root of 9.
-print(math.floor(3.7))       # Floor value of 3.7.
-print(math.ceil(3.1))        # Ceil value of 3.1.
-print(math.factorial(5))     # Factorial of 5.
-print(math.log(100, 10))     # Log base 10 of 100.
+# Math Functions Expand
+print(-abs(number))             # Turns a positive integer, negative.    
 
-#### Conditional Statements and Loops
+## Conditional Statements and Loops
 # Conditional Statements
 x = 15
 if x < 10:
@@ -162,7 +174,7 @@ for i in range(1, 8):
         break      # Exit loop when i == 6.
     print(i)
 
-#### Functions
+## Functions
 # Basic Function
 def function_greet():
     print("Hello, I am a function.")
