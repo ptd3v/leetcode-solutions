@@ -16,11 +16,11 @@ tuple = (1, 2, 3, 4)        # Immutable sequence. Faster than list.
 set = {1, 2, 3, 4}          # Unordered collection of unique items.
 dict = {'A': 1, 'B': 2}     # Key-value pairs. Mutable.
 
-## Applies function to each item in an iterable and returns..
-# A new iterable with the results.
+## Applies function to each item in an iterable and..
+# Changes all items.
 map(str, [1, 2, 3])                 # Converts [1, 2, 3] to ['1', '2', '3']
 
-# A new iterable containing only the items for which the function returns True.
+# Only changes items that meet a condition.
 filter(lambda x: x > 1, [1, 2, 3])  # Returns [2, 3]
 
 ## String Operations
