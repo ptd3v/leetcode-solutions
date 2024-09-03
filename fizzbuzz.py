@@ -21,5 +21,3 @@ for num in range(1, 21):
 for num in range (1,000):
     #For every FizzBuzz below 10 (numbers divisible by 3 and 5), we get 3, 5, 6 and 9.
     #Added together, we get 23. Your task is to add every FizzBuzz under 1,000 together.
-
-#You are welcome to use any language you want, please create your own seperate file in the repo.
