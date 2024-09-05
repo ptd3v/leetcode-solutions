@@ -207,3 +207,14 @@ default_para("Steve")   # Prints "Hello, Steve!"
 # Type Hints
 def bill(balance: int, bill: int) -> int:
     return balance - bill
+
+# Minimum Value
+def minimum(arr):
+    if not arr:
+        return None  # Handle empty list case
+    min_value = arr[0]
+    for num in arr:
+        if num < min_value:
+            min_value = num
+    return min_value
+#   return min(arr)
