@@ -27,7 +27,7 @@ class Solution:
         for k in range(len(words) - 1, 0, -1):
             # Append the current word and a space to the output
             out.append(words[k])
-        # Append the first word to the output (without trailing space)
+            # Append the first word to the output (without trailing space)
         out.append(words[0])
 
         return ' '.join(out)  # Concatenate the reversed words
