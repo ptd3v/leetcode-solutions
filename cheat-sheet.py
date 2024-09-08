@@ -211,7 +211,7 @@ def bill(balance: int, bill: int) -> int:
 # Minimum Value
 def minimum(arr):
     if not arr:
-        return None  # Handle empty list case
+        return None             # Handle empty list case
     min_value = arr[0]
     for num in arr:
         if num < min_value:
