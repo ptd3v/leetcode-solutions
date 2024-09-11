@@ -133,7 +133,7 @@ pow_n = pow(3, 2)               # 3 squared.
 round_value = round(3.14159, 2) # Round to 2 decimal places.
 
 # Math Functions Expand
-print(-abs(number))             # Turns a positive integer, negative.    
+print(-abs(num))             # Turns a positive integer, negative.    
 
 ## Conditional Statements and Loops
 # Conditional Statements
