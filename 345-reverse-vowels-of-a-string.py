@@ -42,3 +42,4 @@ class Solution(object):
         
         # Convert the character array back to a string and return the result.
         return "".join(word)
+
