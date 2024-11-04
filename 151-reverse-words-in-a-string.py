@@ -31,3 +31,4 @@ class Solution:
         out.append(words[0])
 
         return ' '.join(out)  # Concatenate the reversed words
+    
