@@ -43,6 +43,6 @@ class Solution:
         for c in str(count):
           chars[ans] = c
           ans += 1
-
+        
     return ans
   
