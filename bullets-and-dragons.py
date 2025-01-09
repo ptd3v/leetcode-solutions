@@ -14,6 +14,7 @@ def hero(bullets, dragons):
 def hero(bullets, dragons):
     return bullets >= dragons * 2
 
+
 # Solution Three: Community
 # Never even considered lambda, it's basically a mini-function with one output.
 hero = lambda d, b: d >= b*2
