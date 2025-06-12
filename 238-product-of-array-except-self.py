@@ -33,3 +33,4 @@ class Solution:
         answer = [prefix[i] * suffix[i] for i in range(n)]
         
         return answer
+        
